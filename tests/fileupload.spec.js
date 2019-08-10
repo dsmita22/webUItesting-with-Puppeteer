@@ -18,8 +18,9 @@ describe('Test', () => {
           await page.waitForSelector('input[id="RadUpload1file0"]');
           await page.click('input[id="RadUpload1file0"]');
           const input = await page.$("input[type=file]");
-          await input.uploadFile(process.cwd()+ "\\Smita_Dutta_Resume.docx");
-          
+          await input.uploadFile(process.cwd()+ "//Smita_Dutta_Resume.docx");
+          //for windows system
+         //  await input.uploadFile(process.cwd()+ "\\Smita_Dutta_Resume.docx");
           await page.screenshot({path:'upload.png'});
 
     await browser.close();
